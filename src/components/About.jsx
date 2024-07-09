@@ -1,7 +1,12 @@
 import React from "react";
 import Tilt from "react-tilt";
 import { motion } from "framer-motion";
-
+import {
+  AiFillTwitterCircle,
+  AiFillLinkedin,
+  AiFillYoutube,
+  AiFillGithub,
+} from "react-icons/ai";
 import { styles } from "../styles";
 import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
@@ -47,13 +52,21 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        I'm a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React, Node.js, and
-        Three.js. I'm a quick learner and collaborate closely with clients to
+        I'm a skilled software developer with experience in JavaScript and
+        TypeScript, Java and expertise in frameworks like React, Node.js and
+        Next.js. I'm a quick learner and collaborate closely with clients to
         create efficient, scalable, and user-friendly solutions that solve
         real-world problems. Let's work together to bring your ideas to life!
       </motion.p>
-
+      <motion.p
+        variants={fadeIn("", "", 0.1, 1)}
+        className={`${styles.heroSubText} mt-2 text-white-100`}>
+        Checkout my socials <br className='sm:block hidden' />
+        <div style={{ display: "flex", alignItems: "center", gap: "2rem", cursor: "pointer", marginTop: '15px' }}>
+          <a href="https://github.com/ayanbaksi" ><AiFillGithub style={{ borderRadius: "50%" }} /></a>
+          <a href="https://www.linkedin.com/in/ayan-baksi-318a14298/" style={{ cursor: "pointer" }}><AiFillLinkedin style={{ borderRadius: "50%" }} /></a>
+        </div>
+      </motion.p>
       <div className='mt-20 flex flex-wrap gap-10'>
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />

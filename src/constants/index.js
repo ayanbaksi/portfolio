@@ -176,7 +176,7 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Ayan does.",
+      "I've never met a web developer who truly cares about their clients success like Ayan does.",
     name: "Susan Guha",
     designation: "CEO",
     company: "TGB Infotech",
